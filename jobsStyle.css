@@ -1,0 +1,554 @@
+/* Reset default margins & paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    border-bottom: 10px solid #0c0c0c;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 8);
+}
+
+img {
+    height: 80px;
+    margin-left: 5vh;
+    margin-top: 5px;
+}
+
+nav ul {
+    margin-right: 15vh;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(15, 15, 16);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    color: rgb(249, 249, 250);
+    background: rgba(62, 62, 62, 0.8);
+}
+
+nav ul li a.active {
+    color: rgb(249, 249, 250);
+    background: rgba(62, 62, 62, 0.8);
+}
+
+
+button {
+    margin-top: 10px;
+    border: 3px solid black;
+    color: rgb(9, 9, 9);
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 1.2rem;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-style: bold;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+
+
+main {
+    background: url('images/truck1.PNG') no-repeat center center/cover;
+    background-attachment: fixed;
+
+
+    flex: 1;
+    animation: moveBackground 10s linear infinite alternate;
+
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+
+    100% {
+        background-position: center bottom;
+    }
+}
+
+
+.hiring {
+    height: 60vh;
+    width: 70vh;
+    margin: 2vh;
+    border-radius: 10px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0.7, 0.2);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#btn-appForm {
+    margin-left: 5vh;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hiringJtl {
+    display: flex;
+    gap: 10vh;
+
+
+
+}
+
+h1 {
+    margin: 5vh;
+    margin-bottom: 20vh;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #1a01ff;
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+ 
+
+}
+@keyframes slideInFromLeft {
+    
+from {
+    opacity: 0;
+    transform: translatey(-100%);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+p {
+    font-size: 23px;
+    color: rgb(249, 245, 248);
+
+    margin-right: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1c3838cc;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 8);
+    box-shadow: inset;
+
+    animation: slideInFromLeft 2s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+ 
+
+}
+@keyframes slideInFromLeft {
+    
+from {
+    opacity: 0;
+    transform: translatey(-100%);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+.left {
+    background: rgba(255, 254, 254, 0.8);
+    color: white;
+    margin: 90px;
+    padding: 3px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 3s ease-out forwards;
+    animation-delay: .5s;
+    opacity: 0;
+ 
+
+}
+@keyframes slideIn {
+    
+from {
+    opacity: 0;
+    transform: translateZ(-100%);
+}
+
+to {
+    opacity: 1;
+    transform: translatex(0);
+}
+
+}
+
+/* General Styles */
+
+
+
+/* Form Styling */
+#appForm {
+    background-color: white;
+    max-width: 120vh;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form {
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #121112;
+    margin: 20px;
+    font-size: 30px;
+    font-style: italic;
+    
+}
+
+/* Fieldset & Legend */
+fieldset {
+    border: 2px solid #0656f6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #0656f6;
+
+}
+
+/* Labels & Inputs */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 70px;
+}
+
+/* Buttons */
+#btn-add,
+#btn-addemp {
+    display: block;
+    width: 10%;
+    background: #6d8ff4;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 90vh;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Employment Section */
+.employment-section,
+.pastEmployment-section {
+    background: #f3f0f0;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    max-width: 100%;
+    width:auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+    color: rgb(9, 9, 9);
+    text-align: center;
+}
+
+#text {
+    height: 40px;
+    border: none;
+    margin: 0px;
+}
+
+#claim {
+    margin-left: 20px;
+}
+
+#btn-submit {
+    display: block;
+    width: 20%;
+    background: linear-gradient(35deg, #046fd3, #01ff6b);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 43vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2em;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 8);
+}
+
+ /* Mobile-specific Styles */
+@media (max-width: 768px) {
+
+    body{
+        overflow: scroll;
+        text-wrap:inherit;
+    }
+   
+    .header {
+        padding: 10px 3%;
+
+
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 0px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .nav-links {
+        margin-left: 30px;
+    }
+
+    img {
+        height: 50px;
+        margin-left: 3vh;
+        margin-top: 3px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.8);
+        z-index:10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        margin-left: 80px;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px;
+        color: white;
+        ;
+    }
+
+    nav ul li a:hover {
+        background: rgba(62, 62, 62, 0.8);
+    }
+
+    nav ul li a.active {
+        background-color: none;
+        border: 2px solid rgb(254, 254, 254);
+    }
+
+    #btn-quote {
+        padding: 3px 5px;
+        font-size: 1rem;
+        margin-right: 1vh;
+    }
+    /* Display hamburger menu for mobile */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Make sure hamburger works */
+    .hamburger.active + ul {
+        display: flex;
+    }
+
+   
+    #appForm {
+         width:auto;
+    }
+
+   
+    /* Hiring section layout for mobile */
+    .hiring {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .hiringJtl {
+        flex-direction: column;
+        margin-top: 0px;
+        gap: 5vh;
+    }
+
+    .left {
+        margin: 50px;
+        padding: 10px;
+        background: rgba(255, 254, 254, 0.8);
+    }
+
+    .right{
+        margin-top:  0px;
+    }
+
+    p{
+        margin-top: 5px;
+    }
+
+    /* Footer styling for mobile */
+    footer {
+        font-size: 14px;
+        padding: 15px;
+         
+    }
+
+    /* Form Styles */
+    form {
+        width: 100%;
+        padding: 15px;
+        font-size: 12px;;
+        
+    }
+
+   
+
+    /* Input fields and select boxes on mobile */
+    input, select, textarea {
+        padding: 8px;
+        font-size: 12px;
+        
+    }
+
+  
+     
+    /* Adjust table layout for mobile */
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    #btn-add,
+    #btn-addemp {
+        
+       width:70px;
+        margin-left: 40vh;
+        
+    }
+
+    /* Adjust submit button for mobile */
+    #btn-submit {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .right {
+        margin: 20px;
+    }
+}

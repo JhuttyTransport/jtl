@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | Jhutty Transport LTD</title>
+    <link rel="stylesheet" href="jobsStyle.css">
+    <script src="jobs.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo.jpg">
+
+        <div class="top">
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                    <li><a href="jobs.html " class="active">Jobs</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+            </nav>
+ 
+
+        </div>
+        <button id="btn-quote" onclick=" window.location.href='quote.html'"> Quote</button>
+    </div>
+
+
+    <main>
+        <div class="hiringJtl">
+            <div class="left">
+                <img src="images/Hiring.png" class="hiring">
+            </div>
+
+            <div class="right">
+                <h1> Want to be a part of JTL Team? </h1>
+
+                <p>
+                    We are looking for drivers who have atleast 2-years of experience.<br><br>
+
+                    <u>To apply:</u>
+                    <br><br>
+                    1. Download the drivers Application form by clicking the button below and email us at
+                    info@jhuttytramsport.com <br>
+
+                    <button id="btn-appForm" onclick="downloadForm() "> Application Form</button><br>
+
+                    2. Fill the Drivers Application form below and submit it.<br>
+                    <img src="images/arrow-red.gif">
+                </p>
+                
+            </div>
+
+
+        </div>
+        <div id="appForm">
+
+            <FORM class="form" action="https://formspree.io/f/mwpllrpg" method="POST">
+
+                <h2> DRIVER PROFILE</h2>
+                <fieldset>
+                    <legend>DRIVER INFORMATION</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="license">License #:</label>
+                    <input type="text" id="license" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+
+                    <label for="licenseClass">Driver License Class:</label>
+                    <input type="text" id="licenseClass">
+                    <label for="dob"> Original date of obtaining Driver License for AZ class or class 1</label>
+                    <input type="date" id="odate">
+
+
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>DRIVING EXPEREINCE</legend>
+                    <div class="form-group">
+                        <label>How many years experience for driving heavy commercial vehicle: </label>
+                        <input type="number" name="exp" id="exp">
+                    </div>
+                    <div class="form-group">
+                        <label> Are you currently an (please specify which ever applies):</label>
+                        Owner Operator <input type="checkbox" id="cbox">
+                        Driver <input type="checkbox" id="cbox">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>TRUCKING COMPANY EMPLOYMENT INFORMATION</legend>
+                    <div><I><U>IMPORTANT:</U> For each employment experience, please ensure all the fields are <u>completely fill and accurate</u></I></div>
+
+                    <div class="employment-section">
+                        <label><strong>Current Employer where you are driving heavy truck: </strong></label><br>
+                        <label for="currentcompany">Company Name:</label>
+                        <input type="text" id="company" name="currentcompany">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address1" name="address">
+                        <label for="supervisor">Supervisor’s Name:</label>
+                        <input type="text" id="supervisor1" name="supervisor">
+                        <label for="phone">Phone #:</label>
+                        <input type="tel" id="phone1" name="phone">
+                        <label for="startDate"><strong>Employment Start Date: </strong></label>
+                        <input type="date" id="sdate1" name="sdate">
+                        <label for="endDate"><strong>Employment End Date: </strong></label>
+                        <input type="date" id="edate1" name="edate"><br>
+                        
+                        <label>Type of Vehicle(s) most often driven for this employer: </label><br>
+                        <label>Tractor</label><input type="checkbox" name="vehicleType">
+
+                    </div>
+                    <div class="pastEmployment-section">
+                        <label><strong>Past Employer where you drove the heavy truck: </strong></label><br>
+                        <label for="pastCompany1">Company Name:</label>
+                        <input type="text" id="company2" name="company">
+                        <label for="address2">Address:</label>
+                        <input type="text" id="address2" name="address">
+                        <label for="supervisor2">Supervisor’s Name:</label>
+                        <input type="text" id="supervisor1" name="supervisor">
+                        <label for="phone1">Phone #:</label>
+                        <input type="tel" id="phone2" name="phone">
+                        <label for="startDate"><strong>Employment Start Date: </strong></label>
+                        <input type="date" id="sdate2" name="sdate">
+                        <label for="endDate"><strong>Employment End Date: </strong></label>
+                        <input type="date" id="edate2" name="edate"><br>
+                        
+                        <label>Type of Vehicle(s) most often driven for this employer: </label><br>
+                        Tractor <input type="checkbox" name="vehicleType">
+
+
+                        <button type="button" id="btn-addemp" onclick="addEmployment()">+ Add</button>
+                    </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend>CLAIMS HISTORY(Please check the box that applies below)</legend>
+                    <strong>If no claims during last 3 years. Check this box</strong><input type="checkbox"
+                        id="claim" name="claim"><br>
+                    <br>
+                    <strong>(Please describe all accidents you were involved in for the last 3 (three) years regardless
+                        of fault
+                        on heavy commercial vehicles) </strong>
+                    <table>
+                        <tr>
+
+                            <th>Date of accident</th>
+                            <th>Description and duration of accident</th>
+                            <th>% of fault</th>
+                            <th>Total amount paid</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="accidentDate" id="text"></td>
+                            <td><textarea rows="3" name="Description" id="text"></textarea></td>
+                            <td><input type="text" name="fault" id="text"></td>
+                            <td><input type="text" name="amount" id="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="accidentDate" id="text"></td>
+                            <td><textarea rows="3" name="Description" id="text"></textarea></td>
+                            <td><input type="text" name="fault" id="text"></td>
+                            <td><input type="text" name="amount" id="text"></td>
+                        </tr>
+
+                    </table>
+                    <button type="button" id="btn-add" onclick="addRow()">+ Add</button>
+
+
+                </fieldset>
+
+
+                COMMENTS:<br>
+                <textarea id="cmt" name="comment" rows="6"></textarea>
+
+                <br><br>
+                <div id="para"> I certify that I personally completed this application and that all of the information
+                    is true and correct.
+                    With respect to this Driver
+                    Profile, or any renewal or change in coverage, I authorize you to collect, use and disclose
+                    information as
+                    permitted by law for the
+                    purposes necessary to assess the risk, investigate and settle claims, and detect and prevent fraud,
+                    such as
+                    credit information, driving
+                    record information and claims history. </div>
+
+                <br>
+                Date<input type="text" name="submissionDate" id="pdate" required>
+                <br>
+                Please print your name<input type="text" name="Name" id="pname" required>
+                <br><br>
+
+                <button type="submit" id="btn-submit">Submit</button>
+            </FORM>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+        &copy; 2025 Jhutty Transport LTD | All Rights Reserved
+    </footer>
+</body>
+
+</html>

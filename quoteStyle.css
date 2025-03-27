@@ -1,0 +1,333 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  
+}
+
+ 
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;/* Space between logo, nav, and button */
+    padding:10px 5%;
+    padding-bottom: 10px;
+    border-bottom: 10px solid #0c0c0c;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+     
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    height:80px;
+    margin-left: 5vh;
+    margin-top: 5px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 15vh;
+    
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a{
+
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+ul li a:hover{
+    color:white;
+    background: rgba(62, 62, 62, 0.8);
+}
+ .active {
+    color: rgb(249, 249, 250);
+    background: rgba(62, 62, 62, 0.8);
+}
+
+button {
+    margin-top: 10px;
+    border: 3px solid black;
+    color: rgb(9, 9, 9);
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 1.2rem;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-style: bold;
+}
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+
+main {
+    background: url('images/truck1.PNG') no-repeat center center/cover;
+
+    background-attachment: fixed;
+
+    flex: 1;
+    animation: moveBackground 10s linear infinite alternate;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+
+    100% {
+        background-position: center bottom;
+    }
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: rgba(248, 245, 245, 0.8);
+    animation:  slide 1s ease-in forwards
+
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatey(-90%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+ 
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+
+}
+
+.quote-form {
+    max-width: 800px;
+ 
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(14, 14, 14, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: .5s;
+    opacity: 0;
+ 
+
+}
+@keyframes slideInFromLeft {
+    
+from {
+    opacity: 0;
+    transform: translatez(-100%);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+     
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #0901f4;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 80%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid #0008ff;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #046fd3, #01ff6b);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 30%;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.6);
+}
+ 
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #2701fd, #03cff3);
+    box-shadow: 0px 4px 15px rgba(255, 69, 0, 1);
+    transform: translateY(-3px);
+}
+
+ .call{
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0px 450px;
+
+    margin-bottom:40px;
+ }
+
+
+@media (max-width: 768px) {
+
+  
+    
+    .hamburger {
+        display: block;
+        margin-right: 0px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        padding: 10px;
+        margin-left: 20px;
+        z-index: 1;
+    }
+
+   .header {
+        padding: 10px 3%;
+    }
+
+    
+    
+    img {
+        height: 50px;
+        margin-left: 3vh;
+        margin-top: 3px;
+    }
+
+    nav ul { 
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        margin-left:80px;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px;
+        color: white;;
+    }
+
+    nav ul li a:hover {
+        background: rgba(62, 62, 62, 0.8);
+    }
+    nav ul li a.active {
+        background-color: none;
+        border:2px solid rgb(254, 254, 254);
+     }
+
+    button {
+        padding: 3px 5px;
+        font-size: 1rem;
+        margin-right: 1vh;
+    }
+ 
+    .quote-form {
+        width: 90%;
+    }
+    .btn-submit{
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+    .call{
+        
+       
+        margin: 10px 50px;
+    
+        
+    }
+    
+}

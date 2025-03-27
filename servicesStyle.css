@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* margin: 0; */
+}
+
+main {
+    background: url('images/truck1.PNG') no-repeat center center/cover;
+
+    background-attachment: fixed;
+
+    flex: 1;
+    animation: moveBackground 10s linear infinite alternate;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+
+    100% {
+        background-position: center bottom;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    
+    border-bottom: 10px solid #0c0c0c;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space between logo, nav, and button */
+    padding: 10px 5%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.top {
+    display: FLOAT;
+    FLOAT: RIGHT;
+}
+
+img {
+    border: 5 px;
+    border-radius: 10px;
+    height: 80px;
+    margin-left: 5vh;
+    margin-top: 5px;
+}
+
+nav ul {
+
+    margin-right: 15vh;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(15, 15, 16);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    color: rgb(249, 249, 250);
+    background: rgba(34, 34, 34, 0.8);
+}
+
+nav ul li a.active {
+    color: rgb(249, 249, 250);
+    background: rgba(62, 62, 62, 0.8);
+}
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.jtlServices {
+
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation:  slide 1s ease-in forwards
+
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatey(-90%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+ 
+
+
+button {
+    margin-top: 10px;
+    border: 3px solid black;
+    color: rgb(9, 9, 9);
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 1.2rem;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-style: bold;
+}
+
+/* Services Section */
+.services-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 30px;
+    color: black;
+    
+}
+
+ 
+
+.service {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    opacity: 0;
+    animation: fadeInUp 1s ease-in forwards;
+   
+}
+.service:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.service:nth-child(2) {
+    animation-delay: 4s;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.service1 h2 {
+    font-size: 2rem;
+ 
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slide 1s ease-out forwards;
+    animation-delay: 2s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service1 p {
+    font-size: 1.2rem;
+   
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slide 1s ease-out forwards;
+    animation-delay: 3s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service1 ul {
+    list-style: none;
+    padding: 0;
+    opacity: 0; /* Hide initially */
+    animation: slide 1s ease-out forwards;
+    animation-delay: 3s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service1 ul li {
+    font-size: 1.2rem;
+  
+    margin-bottom: 10px;
+}
+
+.service1 ul li::before {
+    content: "✔ ";
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+ul {
+    flex: 1;
+}
+
+.gif {
+    margin-right: 10rem;
+    margin-bottom: 20px;
+    width: 30%;
+    height: auto;
+    opacity: 0; /* Hide initially */
+    animation: slide 1s ease-out forwards;
+    animation-delay: 4s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* bottom Section */
+.contact {
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+
+    opacity: 0; /* Hide initially */
+    animation: slide 1s ease-out forwards;
+    animation-delay: 5s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #e67e22;
+}
+
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 10px 3%;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 0px;
+    }
+    .nav-links.active {
+        display: flex;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    img {
+        height: 50px;
+        margin-left: 3vh;
+        margin-top: 3px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        z-index:10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        margin-left: 80px;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        background: rgba(62, 62, 62, 0.8);
+    }
+
+    nav ul li a.active {
+       background-color: none;
+       border:2px solid rgb(254, 254, 254);
+    }
+    button {
+        padding: 3px 5px;
+        font-size: 1rem;
+        margin-right: 1vh;
+    }
+
+    .jtlServices {
+        margin: 30px;
+        font-size: 1.6rem;
+    }
+
+    .services-container {
+        margin: 40px 20px;
+    }
+
+    .service1 h2 {
+        font-size: 1.4rem;
+        text-decoration: underline;
+
+    }
+
+    .service1 p {
+        font-size: 1.1rem;
+    }
+
+
+    .service1 ul li {
+        font-size: 1.1rem;
+        
+    }
+
+    .service1 ul li::before {
+        content: "✔ ";
+        color: #f39c12;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .gif {
+        width: 80%;
+
+    }
+
+
+
+    .contact h2 {
+        font-size: 1.5rem;
+
+    }
+
+
+
+}
+
+.nav-links.show {
+    display: flex;
+}

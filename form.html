@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <title>
+        form
+    </title>
+    <link rel="stylesheet" href="form.css">
+    <script src="jobs.js"></script>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+
+
+    
+    <FORM class="form" action="https://formspree.io/f/mwpllrpg" method="POST">
+
+        <h2> DRIVER PROFILE</h2>
+        <fieldset>
+            <legend>DRIVER INFORMATION</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="license">License #:</label>
+            <input type="text" id="license" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="licenseClass">Driver License Class:</label>
+            <input type="text" id="licenseClass">
+            <label for="dob"> Original date of obtaining Driver License for AZ class or class 1</label>
+            <input type="date" id="odate">
+
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>DRIVING EXPEREINCE</legend>
+            <div class="form-group">
+                <label>How many years experience for driving heavy commercial vehicle: </label>
+                <input type="number" name="exp" id="exp">
+            </div>
+            <div class="form-group">
+                <label> Are you currently an (please specify which ever applies):</label>
+                Owner Operator <input type="checkbox" id="cbox">
+                Driver <input type="checkbox" id="cbox">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>TRUCKING COMPANY EMPLOYMENT INFORMATION</legend>
+            <I><U>IMPORTANT:</U> For each employment experience, please ensure all the fields are <u>completely
+                    fill and
+                    accurate</u></I>
+
+
+            <div class="employment-section">
+                <label><strong>Current Employer where you are driving heavy truck: </strong></label><br>
+                <label for="company2">Company Name:</label>
+                <input type="text" id="company2" name="company2">
+                <label for="address1">Address:</label>
+                <input type="text" id="address1" name="address1">
+                <label for="supervisor1">Supervisor’s Name:</label>
+                <input type="text" id="supervisor1" name="supervisor1">
+                <label for="phone1">Phone #:</label>
+                <input type="tel" id="phone1" name="phone1">
+                <label for="startDate"><strong>Employment Start Date: </strong></label>
+                <input type="date" id="sdate1" name="sdate1">
+                <label for="endDate"><strong>Employment End Date: </strong></label>
+                <input type="date" id="edate1" name="edate1"><br>
+                <label for="hrSignature1">Hiring Manager or Safety Manager Signature of reference
+                    verification:</label>
+                <input type="text" id="hrSignature1" name="hrSignature1" optional>
+                <label>Type of Vehicle(s) most often driven for this employer: </label><br>
+                <label>Tractor</label><input type="checkbox">
+
+            </div>
+            <div class="pastEmployment-section">
+                <label><strong>Past Employer where you drove the heavy truck: </strong></label><br>
+                <label for="company2">Company Name:</label>
+                <input type="text" id="company2" name="company2">
+                <label for="address2">Address:</label>
+                <input type="text" id="address2" name="address2">
+                <label for="supervisor2">Supervisor’s Name:</label>
+                <input type="text" id="supervisor1" name="supervisor2">
+                <label for="phone1">Phone #:</label>
+                <input type="tel" id="phone2" name="phone2">
+                <label for="startDate"><strong>Employment Start Date: </strong></label>
+                <input type="date" id="sdate2" name="sdate2">
+                <label for="endDate"><strong>Employment End Date: </strong></label>
+                <input type="date" id="edate2" name="edate2"><br>
+                <label for="hrSignature2">Hiring Manager or Safety Manager Signature of reference
+                    verification:</label>
+                <input type="text" id="hrSignature2" name="hrSignature2" optional>
+                <label>Type of Vehicle(s) most often driven for this employer: </label><br>
+                Tractor <input type="checkbox">
+
+
+                <button type="button" id="btn-addemp" onclick="addEmployment()">+ Add</button>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>CLAIMS HISTORY(Please check the box that applies below)</legend>
+            <strong>If no claims during last 3 years. Check this box</strong><input type="checkbox"
+                id="claim"><br>
+            <br>
+            <strong>(Please describe all accidents you were involved in for the last 3 (three) years regardless
+                of fault
+                on heavy commercial vehicles) </strong>
+            <table>
+                <tr>
+
+                    <th>Date of accident</th>
+                    <th>Description and duration of accident</th>
+                    <th>% of fault</th>
+                    <th>Total amount paid</th>
+                </tr>
+                <tr>
+                    <td><input type="date" name="text" id="text"></td>
+                    <td><textarea rows="3" id="text"></textarea></td>
+                    <td><input type="text" name="text" id="text"></td>
+                    <td><input type="text" name="text" id="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="text" id="text"></td>
+                    <td><textarea rows="3" id="text"></textarea></td>
+                    <td><input type="text" name="text" id="text"></td>
+                    <td><input type="text" name="text" id="text"></td>
+                </tr>
+
+            </table>
+            <button type="button" id="btn-add" onclick="addRow()">+ Add</button>
+
+
+        </fieldset>
+
+
+        COMMENTS:<br>
+        <textarea id="cmt" name="cmt" rows="6"></textarea>
+
+        <br><br>
+        <div id="para"> I certify that I personally completed this application and that all of the information
+            is true and correct.
+            With respect to this Driver
+            Profile, or any renewal or change in coverage, I authorize you to collect, use and disclose
+            information as
+            permitted by law for the
+            purposes necessary to assess the risk, investigate and settle claims, and detect and prevent fraud,
+            such as
+            credit information, driving
+            record information and claims history. </div>
+
+        <br>
+        Date<input type="text" id="pdate">
+        <br>
+        Please print your name<input type="text" id="pname">
+        <br><br>
+
+        <button type="submit" id="btn-submit">Submit</button>
+    </FORM>
+
+
+
+
+</body>
+
+</html>

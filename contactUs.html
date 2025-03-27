@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Jhutty Transport LTD</title>
+    <link rel="stylesheet" href="contactStyle.css">
+    <script src="calender.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+   
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactUs.html" class="active">Contact</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+            <button onclick="window.location.href='quote.html'">Quote</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Get in Touch with Us</h1>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Jhutty Transport LTD</strong></p>
+                <p>📍 365 Healey Rd, Unit 13, Bolton, ON L7E 5C1</p>
+                <p style="color: #f39c12">📞 +1 (416) 623-6647</p>
+                <p>✉ <a href="mailto:info@jhuttytransport.com">info@jhuttytransport.com</a></p>
+                <p>🕒 24/7 available</p>
+            </div>
+
+            <div class="calender-container">
+                <div class="calendar">
+                    <h3 id="month-year"></h3>
+                    <div class="weekdays">
+                        <div>MON</div><div>TUE</div><div>WED</div><div>THU</div>
+                        <div>FRI</div><div>SAT</div><div>SUN</div>
+                    </div>
+                    <div class="days" id="calendar-days"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <button onclick="window.open('https://www.google.com/maps/place/JTL+Bolton+office/','_blank')">View Map</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jhutty Transport LTD | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
